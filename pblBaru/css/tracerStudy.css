@@ -1,0 +1,397 @@
+/* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: var(--accent-color);
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+
+.top-nav .container,
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav ul,
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-nav a,
+.user-profile a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0 10px;
+    transition: var(--transition);
+}
+
+.top-nav a:hover,
+.user-profile a:hover {
+    color: var(--white);
+}
+
+/* Main Navigation */
+.main-nav {
+    padding: 15px 0;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    transform: translateX(0);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling for the container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading */
+h1 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Styling for each form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for input fields and select dropdowns */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Custom styling for the select dropdown */
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+/* Styling for placeholder text */
+input::placeholder {
+    color: #999;
+}
+
+/* Container for buttons */
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #1976d2;
+}
+
+/* Styling for each question */
+.question {
+    margin-bottom: 20px;
+}
+
+/* Styling for radio and checkbox inputs */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-left: 1px;
+}
+
+/* Styling for radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"] {
+    border-radius: 3px;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+
+/* Styling for labels next to radio buttons and checkboxes */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+/* Container for radio buttons and checkboxes */
+.radio-group,
+.checkbox-group {
+    margin-bottom: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    margin-right: 15px;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1976d2;
+}
+
+/* kuesioner */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#additionalQuestions {
+    display: none;
+}

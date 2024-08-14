@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "major": "Computer Science",
+      "year": 2020,
+      "job": "Software Engineer"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "major": "Information Technology",
+      "year": 2019,
+      "job": "Data Analyst"
+    }
+  ]
